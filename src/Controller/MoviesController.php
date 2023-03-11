@@ -25,8 +25,30 @@ class MoviesController extends AbstractController
       $this->em =$em;
   }
  
+  // #[Route('/' , methods:['GET'])]
+  // public function index2(): Response
+  // {
 
-    #[Route(['/movies','/' ], methods:['GET'], name: 'movies')]
+  //     return $this->render('movies/index.html.twig');
+  // }
+  
+  #[Route('/tailwindtest' , methods:['GET'])]
+  public function getTailwind(): Response
+  {
+
+      return $this->render('movies/bootstrapandtailwind.html.twig');
+  }
+
+
+  #[Route('/contact' , methods:['GET'])]
+  public function contact(): Response
+  {
+
+      return $this->render('components/contact.html.twig');
+  }
+ 
+
+    #[Route(['/movies','/'] , methods:['GET'], name: 'movies')]
     public function index(): Response
     {
 
@@ -146,5 +168,12 @@ class MoviesController extends AbstractController
         return $this->render('movies/show.html.twig',[
           'movie'=> $movie
         ]);
+    }
+
+    #[Route('/userDash',methods:['GET'], name: 'home')]
+    public function getHome(): Response
+    {
+      
+        return $this->render('movies/userDash.html.twig');
     }
 }

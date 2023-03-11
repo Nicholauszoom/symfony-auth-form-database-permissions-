@@ -106,10 +106,10 @@ class Movie
         if (!$this->actors->contains($actor)) {
             $this->actors->add($actor);
         }
-
+    
         return $this;
     }
-
+    
     public function removeActor(Actor $actor): self
     {
         $this->actors->removeElement($actor);
