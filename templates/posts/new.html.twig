@@ -1,0 +1,48 @@
+{#{% extends 'base2.html.twig' %}#}
+
+{#{% block title %}New Posts{% endblock %}#}
+
+{#{% block body %}#}
+{#    <h1>Create new Posts</h1>#}
+
+{#    {{ include('posts/_form.html.twig') }}#}
+
+{#    <a href="{{ path('app_posts_index') }}">back to list</a>#}
+{#{% endblock %}#}
+
+
+
+
+
+{% extends 'base2.html.twig' %}
+
+{% block title %}New Posts{% endblock %}
+
+{% block body %}
+    <div class="w-4/5 m-auto text-center">
+        <div class="py-6 border-b border-gray-200">
+            <h1 class="text-6xl pt-6 pb-5 mt-12">
+                Create new Posts
+            </h1>
+            <a
+                    href="{{ path('app_posts_index') }}"
+                    class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                back to list
+            </a>
+
+
+            {{ include('posts/_form.html.twig') }}
+
+{#            <button#}
+{#                    type="submit"#}
+{#                    class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg w-1/5 mt-10 font-extrabold py-4 px-8 rounded-3xl">#}
+{#                create#}
+{#            </button>#}
+
+
+
+
+
+        </div>
+    </div>
+{% endblock %}

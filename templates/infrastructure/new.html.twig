@@ -1,0 +1,23 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}New Infrastructure{% endblock %}
+
+{% block body %}
+<div class="w-4/5 m-auto text-center">
+    <div class="py-6 border-b border-gray-200">
+       <h1>Create new Infrastructure</h1>
+        <div class="m-auto w-4/5 my-8">
+            <a
+                    href="{{ path('app_infrastructure_index') }}"
+                    class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                back to list
+            </a>
+        </div>
+
+
+    {{ include('infrastructure/_form.html.twig') }}
+
+{#    <a href="{{ path('app_infrastructure_index') }}">back to list</a>#}
+    </div>
+</div
+{% endblock %}

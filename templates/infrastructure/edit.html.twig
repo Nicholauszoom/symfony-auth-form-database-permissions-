@@ -1,0 +1,13 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Edit Infrastructure{% endblock %}
+
+{% block body %}
+    <h1>Edit Infrastructure</h1>
+
+    {{ include('infrastructure/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_infrastructure_index') }}">back to list</a>
+
+    {{ include('infrastructure/_delete_form.html.twig') }}
+{% endblock %}

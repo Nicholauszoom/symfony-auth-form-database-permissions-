@@ -1,24 +1,3 @@
-{# {% extends 'base.html.twig' %}
-
-{% block title %}Hello FrontDetailController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Development/symfonyproject2/movies/src/Controller/FrontDetailController.php'|file_link(0) }}">src/Controller/FrontDetailController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Development/symfonyproject2/movies/templates/front_detail/index.html.twig'|file_link(0) }}">templates/front_detail/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %} #}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,284 +5,311 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Arsha Bootstrap Template - Index</title>
+  <title>ARDHI help desk - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.aru.ac.tz/site/images/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.aru.ac.tz/site/images/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.aru.ac.tz/site/images/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.aru.ac.tz/site/images/icon/apple-icon-76x76.png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+
+  <style media="screen">
+    p img{
+      width: 100%
+    }
+  </style>
+  <link rel="stylesheet" href="https://www.aru.ac.tz/site/css/master.min.css">
+
+
+  <style>
+
+    .event-main-div{
+      border:1px solid #D55E1C;
+    }
+
+    .event-main-title{
+      border-bottom:1px solid #D55E1C;
+    }
+
+    .event-main-title a:hover{
+      color:#36454F !important;
+    }
+
+    .event-div:hover{
+      background-color: #f5f5f5;
+    }
+
+    .project-main-div{
+      border:1px solid #2752A1;
+    }
+
+    .project-main-title{
+      border-bottom:1px solid #2752A1;
+    }
+
+    .project-main-title a:hover{
+      color:#36454F !important;
+    }
+
+    .project-div:hover{
+      background-color: #f5f5f5;
+    }
+
+  </style>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Arsha - v4.10.0
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top bg-danger ">
+  <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="/userDash">User Dashboard</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <a href="index.html" class="logo me-auto"><img src="https://www.aru.ac.tz/site/images/icon/apple-icon-76x76.png" alt="" class="img-fluid"></a>
 
-    </div>
-  </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Better Solutions For Your Business</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div>
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img  src="https://www.aru.ac.tz/site/images/icon/apple-icon-76x76.png" class="h-8 mr-3" alt="Flowbite Logo">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ARDHI help desk</span>
+        </a>
+        <div class="flex md:order-2">
+          <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> <a href="/login" >Login</a></button>
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+
         </div>
       </div>
-    </div>
+    </nav>
+    <!-- .navbar -->
 
-  </section><!-- End Hero -->
+  </div>
+</header><!-- End Header -->
+
+
+<div class="home-page row my-20">
+
+  <div class="container max-1920" >
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" style="background: #2752A1">
+          <div class="row">
+            <div class="col-md-4 my-auto ">
+              <div class="slider-content px-4 px-xs-0 text-white">
+
+                <h4><b>ARDHI-help desk</b></h4>
+                <hr class="bg-white">
+                <h6 class="text-justify">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+ </h6>
+
+              </div>
+            </div>
+            <div class="col-md-8 bg-white px-0">
+              <!-- aspect ration on cropper for image is 16/7-->
+
+              <img class="d-block w-100" src="https://www.aru.ac.tz/uploads/gallery/a76362e17f8ef16a0b53bc1f57d8f28e.jpg" alt="">
+            </div>
+
+            <div class="col-md-12">
+              <div class="row px-3 w-100">
+                <div class="col-md-4">  </div>
+                <div class="col-md-8 text-justify text-white py-3 px-4">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="carousel-item " style="background: #2752A1">
+          <div class="row">
+            <div class="col-md-4 my-auto ">
+              <div class="slider-content px-4 px-xs-0 text-white">
+
+                <h4><b>ARDHI-help desk</b></h4>
+                <hr class="bg-white">
+                <h6 class="text-justify">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                  Ardhi... </h6>
+
+
+              </div>
+            </div>
+            <div class="col-md-8 bg-white px-0">
+              <!-- aspect ration on cropper for image is 16/7-->
+
+              <img class="d-block w-100"  src="uploads/641ec56ad71d4.jpg" alt="">
+            </div>
+
+            <div class="col-md-12">
+              <div class="row px-3 w-100">
+                <div class="col-md-4">  </div>
+                <div class="col-md-8 text-justify text-white py-3 px-4">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="carousel-item " style="background: #2752A1">
+          <div class="row">
+            <div class="col-md-4 my-auto ">
+              <div class="slider-content px-4 px-xs-0 text-white">
+
+                <h4><b>ARDHI-help desk</b></h4>
+                <hr class="bg-white">
+                <h6 class="text-justify">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+
+                  Ardhi... </h6>
+
+
+              </div>
+            </div>
+            <div class="col-md-8 bg-white px-0">
+              <!-- aspect ration on cropper for image is 16/7-->
+
+              <img class="d-block w-100" src="uploads/6413d27a1c79c.jpg" alt="">
+            </div>
+
+            <div class="col-md-12">
+              <div class="row px-3 w-100">
+                <div class="col-md-4">  </div>
+                <div class="col-md-8 text-justify text-white py-3 px-4">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="carousel-item " style="background: #2752A1">
+          <div class="row">
+            <div class="col-md-4 my-auto ">
+              <div class="slider-content px-4 px-xs-0 text-white">
+
+                <h4><b>UDSM-Notice Board</b></h4>
+                <hr class="bg-white">
+                <h6 class="text-justify">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+
+                  Ardhi... </h6>
+
+              </div>
+            </div>
+            <div class="col-md-8 bg-white px-0">
+              <!-- aspect ration on cropper for image is 16/7-->
+
+              <img class="d-block w-100"  src="uploads/image/UNIT14_Hongera sana Prof. Carolyne Nombo.jpeg" alt="">                                                      </div>
+
+            <div class="col-md-12">
+              <div class="row px-3 w-100">
+                <div class="col-md-4">  </div>
+                <div class="col-md-8 text-justify text-white py-3 px-4">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
 
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>About Us</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
+    <div class="col-12 mt-5 main-content">
+      <div class="main-content-inside">
 
 
-{% for detail in details %}
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="container px-0">
 
-  <div class="col">
-    <div class="card">
-      <img src="{{ detail.imagePath }}" class="card-img-top" alt="...">
-      <div class="card-body">
-     <h5 class="card-title">
-      <a href"">  
-     {{ detail.title }}
-     </a>
-     </h5>
-        <p class="card-text">{{ detail.decription }}</p>
-      </div>
-    </div>
-  </div>
-</div>
-{%endfor%}
+          <div class="row">
 
-    <!-- ======= Services Section ======= -->
-    <!--
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
+            {% for detail in details %}
 
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-      {% for detail in details %}
-        <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-            <img
-                    src="{{ detail.imagePath }}"
-                    alt=""
-                    class="shadow-xl rounded-md"
-                />
-              {# <div class="icon"><i class="bx bxl-dribbble"></i></div> #}
-              <h4><a href="">
-               {{ detail.title }}
-              </a></h4>
-                    {{ detail.decription }}
-              <p></p>
-            </div>
-          </div>
-     {% endfor %}
-          {# <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div> #}
-
-          {# <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div> #}
-
-          {# <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div> #}
-
-        </div>
-
-      </div>
-    </section>
-    <!-- End Services Section -->
+              <div class="col-md-4 my-2">
+                <div class="row card-announcement">
+                  <img src="{{ detail.imagePath }}" class="w-100" alt="">
+                  <h5 class="title" style="background-color:#F6BE00" >
+                    {{ detail.title }}
+                  </h5>
 
 
+                  <div class="col-md-12 px-0">
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
+                    <p class="text-secondary" style="color:#FFFF">
+                      {{ detail.decription }}
+                    </p>
 
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                    <img src="https://www.aru.ac.tz/site/images/new_blinks.gif" class="w-30 blinkAnnouncment" alt="">
+                  </div>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+
+            {% endfor %}
+
+
+
+
           </div>
+
 
         </div>
 
-      </div>
-    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
@@ -314,19 +320,20 @@
       <div class="container">
         <div class="row">
 
+
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Arsha</h3>
+            <a href="index.html" class="logo me-auto"><img src="https://www.aru.ac.tz/site/images/icon/apple-icon-76x76.png" alt="" class="img-fluid"></a>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Main CAMPUS ,Sarvey <br>
+              ARDHI UNIVERSITY ,Makongo <br>
+              Tanzania <br><br>
+              <strong>Phone:</strong> +255 789 #### # <br>
+              <strong>Email:</strong> ARDHIinfo@example.com<br>
             </p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4 class ="text-warning">Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
@@ -337,7 +344,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4 class ="text-warning">Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
@@ -348,14 +355,13 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <h4 class ="text-warning">Our Social Networks</h4>
+            <p>UDSM the source of education #visit our sites at:</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
             </div>
           </div>
 
@@ -363,22 +369,23 @@
       </div>
     </div>
 
-    <div class="container footer-bottom clearfix">
+    <div class="container footer-bottom clearfix ">
       <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>2023</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="">ARDHI</a>
       </div>
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center bg-danger"><i class="bi bi-arrow-up-short"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -388,10 +395,77 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script src="https://www.aru.ac.tz/site/js/jquery.min.js"></script>
+  <script src="https://www.aru.ac.tz/site/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.aru.ac.tz/site/js/datatables.min.js"></script>
+  <script src="https://www.aru.ac.tz/site/js/slick.min.js"></script>
+  <script src="https://www.aru.ac.tz/site/js/owl.carousel.min.js"></script>
+  <script src="https://www.aru.ac.tz/site/js/custom.min.js"></script>
+  <script src="https://www.aru.ac.tz/admin/js/visitors-counter/client.min.js"></script>
+  <script src="https://www.aru.ac.tz/admin/js/visitors-counter/visitors.logs.js"></script>
+
+  <script src="https://www.aru.ac.tz/site/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.aru.ac.tz/site/js/slick.min.js"></script>
+
+  <script src="https://www.aru.ac.tz/site/js/custom.min.js"></script>
+
+  <script src="https://www.aru.ac.tz/site/js/magnific-popup.min.js"></script>
+  <script>
+
+    $(document).ready(function() {
+
+
+      /* Video - Magnific Popup */
+      $('.popup-youtube, .popup-vimeo').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        iframe: {
+          patterns: {
+            youtube: {
+              index: 'youtube.com/',
+              id: function(url) {
+                var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+                if ( !m || !m[1] ) return null;
+                return m[1];
+              },
+              src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+            },
+            vimeo: {
+              index: 'vimeo.com/',
+              id: function(url) {
+                var m = url.match(/(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/);
+                if ( !m || !m[5] ) return null;
+                return m[5];
+              },
+              src: 'https://player.vimeo.com/video/%id%?autoplay=1'
+            }
+          }
+        }
+      });
+
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(".meeting-slider").owlCarousel({
+      loop:true,
+      autoplay:true,
+      smartSpeed:3000,
+      autoplayHoverPause:true,
+      dots:true,
+      nav:false,
+      items:1,
+      animateOut: 'fadeOut',
+      navText: ["<i class='fas fa-angle-left fa-3x'></i> "," <i class='fas fa-angle-right fa-3x'></i>"]
+    });
+  </script>
 </body>
 
 </html>

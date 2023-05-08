@@ -22,6 +22,9 @@ class Detail
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $imagePath = null;
 
+    // #[ORM\Column(length: 255, nullable: true)]
+    // private ?string $copyright = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -62,4 +65,16 @@ class Detail
 
         return $this;
     }
+
+    // public function getCopyright(): ?string
+    // {
+    //     return $this->copyright;
+    // }
+
+    // public function setCopyright(?string $copyright): self
+    // {
+    //     $this->copyright = $copyright;
+
+    //     return $this;
+    // }
 }

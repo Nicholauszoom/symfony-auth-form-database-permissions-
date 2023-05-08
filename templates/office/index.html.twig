@@ -1,0 +1,71 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+<main class="flex-1 flex bg-gray-50 mx-auto w-full">
+    <section class="bg-gray-50 dark:bg-gray-50  w-full">
+        <div class="mx-auto w-4/5 my-8">
+            <a
+                    href="/Create_Offce"
+                    class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                Create New
+            </a>
+        </div>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Office name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Building
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Office number
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Action
+                </th>
+
+            </tr>
+            </thead>
+            {% for offices in office %}
+            <tbody>
+            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{ offices.name }}
+                </th>
+                <td class="px-6 py-4">
+                    {{ offices.building }}
+                </td>
+                <td class="px-6 py-4">
+                    {{ offices.code }}
+                </td>
+                <td class="px-6 py-4">
+                    <a
+                            href=""
+                            class="bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300">
+                        show
+                    </a>
+                    <a
+                            href=""
+                            class="bg-red-500 font-bold py-2 px-4 rounded transition-all hover:bg-red-300">
+                        edit
+                    </a>
+                </td>
+
+            </tr>
+
+
+            </tbody>
+            {% endfor %}
+        </table>
+
+    </div>
+    </section>
+</main>
+
+{% endblock %}

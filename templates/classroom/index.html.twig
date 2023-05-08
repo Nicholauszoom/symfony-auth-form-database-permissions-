@@ -1,0 +1,132 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Classroom index{% endblock %}
+
+{% block body %}
+{#    <h1>Classroom index</h1>#}
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Name</th>#}
+{#                <th>Code</th>#}
+{#                <th>Number</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for classroom in classrooms %}#}
+{#            <tr>#}
+{#                <td>{{ classroom.id }}</td>#}
+{#                <td>{{ classroom.name }}</td>#}
+{#                <td>{{ classroom.code }}</td>#}
+{#                <td>{{ classroom.number }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('app_classroom_show', {'id': classroom.id}) }}">show</a>#}
+{#                    <a href="{{ path('app_classroom_edit', {'id': classroom.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="5">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+{#    <a href="{{ path('app_classroom_new') }}">Create new</a>#}
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="flex-1 flex bg-gray-50 mx-auto w-full">
+        <section class="bg-gray-50 dark:bg-gray-50  w-full">
+            <div class="mx-auto w-4/5 my-8">
+                <h1 class="text-6xl pt-6 pb-5">
+                    VENUE Details
+                </h1>
+                <a
+                        href="{{ path('app_classroom_new') }}"
+                        class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                    Create New
+                </a>
+            </div>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Id
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Code
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Building
+                        </th>
+{#                        <th scope="col" class="px-6 py-3">#}
+{#                            Assets#}
+{#                        </th>#}
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+
+                    </tr>
+                    </thead>
+                    {% for classroom in classrooms %}
+                        <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ classroom.id }}
+                            </th>
+                            <td class="px-6 py-4">
+                                {{ classroom.name }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ classroom.code }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ classroom.buildings }}
+                            </td>
+{#                            <td class="px-6 py-4">#}
+{#                                {{ classroom.infrastructure }}#}
+{#                            </td>#}
+                            <td class="px-6 py-4">
+                                <a
+                                        href="{{ path('app_classroom_show', {'id': classroom.id}) }}"
+                                        class="bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300">
+                                    show
+                                </a>
+                                <a
+                                        href="{{ path('app_classroom_edit', {'id': classroom.id}) }}"
+                                        class="bg-red-500 font-bold py-2 px-4 rounded transition-all hover:bg-red-300">
+                                    edit
+                                </a>
+                            </td>
+
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="5">no records found</td>
+                        </tr>
+
+                        </tbody>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </section>
+    </main>
+{% endblock %}

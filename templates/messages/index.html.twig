@@ -1,0 +1,149 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Messages index{% endblock %}
+
+{% block body %}
+{#    <h1>Messages index</h1>#}
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Title</th>#}
+{#                <th>Description</th>#}
+{#                <th>ImagePath</th>#}
+{#                <th>Time</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for message in messages %}#}
+{#            <tr>#}
+{#                <td>{{ message.id }}</td>#}
+{#                <td>{{ message.title }}</td>#}
+{#                <td>{{ message.description }}</td>#}
+{#                <td>{{ message.imagePath }}</td>#}
+{#                <td>{{ message.time ? message.time|date('Y-m-d H:i:s') : '' }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('app_messages_show', {'id': message.id}) }}">show</a>#}
+{#                    <a href="{{ path('app_messages_edit', {'id': message.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="6">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+{#    <a href="{{ path('app_messages_new') }}">Create new</a>#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="flex-1 flex bg-gray-50 mx-auto w-full">
+        <section class="bg-gray-50 dark:bg-gray-50  w-full">
+            <div class="mx-auto w-4/5 my-8">
+                <h1 class="text-6xl pt-6 pb-5">
+                   RECEIVED Messages
+                </h1>
+                <a
+                        href="{{ path('app_messages_new') }}"
+                        class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                    Create New
+                </a>
+            </div>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Id
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Title
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Description
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Deliverd At
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+
+                    </tr>
+                    </thead>
+                    {% for message in messages %}
+                        <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ message.id }}
+                            </th>
+                            <td class="px-6 py-4">
+                                {{ message.title }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ message.description }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ message.time ? message.time|date('Y-m-d H:i:s') : '' }}
+                            </td>
+                            <td class="px-6 py-4">
+                                <a
+                                        href="{{ path('app_messages_show', {'id': message.id}) }}"
+                                        class="bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300">
+                                    show
+                                </a>
+                                <a
+                                        href="{{ path('app_messages_edit', {'id': message.id}) }}"
+                                        class="bg-red-500 font-bold py-2 px-4 rounded transition-all hover:bg-red-300">
+                                    edit
+                                </a>
+                            </td>
+
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="5">no records found</td>
+                        </tr>
+
+                        </tbody>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </section>
+    </main>
+
+
+
+{% endblock %}

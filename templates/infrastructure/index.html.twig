@@ -1,0 +1,121 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Infrastructure index{% endblock %}
+
+{% block body %}
+{#    <h1>Infrastructure index</h1>#}
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Name</th>#}
+{#                <th>Description</th>#}
+{#                <th>ImagePath</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for infrastructure in infrastructures %}#}
+{#            <tr>#}
+{#                <td>{{ infrastructure.id }}</td>#}
+{#                <td>{{ infrastructure.name }}</td>#}
+{#                <td>{{ infrastructure.description }}</td>#}
+{#                <td>{{ infrastructure.imagePath }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('app_infrastructure_show', {'id': infrastructure.id}) }}">show</a>#}
+{#                    <a href="{{ path('app_infrastructure_edit', {'id': infrastructure.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="5">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+{#    <a href="{{ path('app_infrastructure_new') }}">Create new</a>#}
+
+
+
+
+
+
+
+
+
+
+    <main class="flex-1 flex bg-gray-50 mx-auto w-full">
+        <section class="bg-gray-50 dark:bg-gray-50  w-full">
+            <div class="mx-auto w-4/5 my-8">
+                <a
+                        href="{{ path('app_infrastructure_new') }}"
+                        class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                    Create New
+                </a>
+            </div>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Image
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                           Id
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Description
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+
+                    </tr>
+                    </thead>
+                    {% for infrastructure in infrastructures %}
+                        <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <img class="h-10 w-10 rounded-full" src= {{ infrastructure.imagePath }} alt="avatar">
+                            </th>
+                            <th class="px-6 py-4">
+                                {{ infrastructure.id }}
+                            </th>
+                            <td class="px-6 py-4">
+                                {{ infrastructure.name }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ infrastructure.description }}
+                            </td>
+                            <td class="px-6 py-4">
+                                <a
+                                        href="{{ path('app_infrastructure_show', {'id': infrastructure.id}) }}"
+                                        class="bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300">
+                                    show
+                                </a>
+                                <a
+                                        href="{{ path('app_infrastructure_edit', {'id': infrastructure.id}) }}"
+                                        class="bg-red-500 font-bold py-2 px-4 rounded transition-all hover:bg-red-300">
+                                    edit
+                                </a>
+                            </td>
+
+                        </tr>
+
+                    {% else %}
+                        <tr>
+                            <td colspan="5">no records found</td>
+                        </tr>
+                        </tbody>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Asset index{% endblock %}
+
+{% block body %}
+{#    <h1>Asset index</h1>#}
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Name</th>#}
+{#                <th>Category</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for asset in assets %}#}
+{#            <tr>#}
+{#                <td>{{ asset.id }}</td>#}
+{#                <td>{{ asset.name }}</td>#}
+{#                <td>{{ asset.category }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('app_asset_show', {'id': asset.id}) }}">show</a>#}
+{#                    <a href="{{ path('app_asset_edit', {'id': asset.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="4">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+{#    <a href="{{ path('app_asset_new') }}">Create new</a>#}
+{#{% endblock %}#}
+
+
+
+
+
+
+
+
+<main class="flex-1 flex bg-gray-50 mx-auto">
+    <section class="bg-gray-50 dark:bg-gray-50  w-full">
+        <div class="mx-auto w-4/5 my-8">
+            <a
+                    href="{{ path('app_asset_new') }}"
+                    class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                Create New
+            </a>
+        </div>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Id
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Name
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Category
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Action
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+
+                    </th>
+                </tr>
+                </thead>
+                {% for asset in assets %}
+                    <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {{ asset.id }}
+                        </th>
+                        <td class="px-6 py-4">
+                            {{ asset.name }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ asset.category }}
+                        </td>
+                        <td class="px-6 py-4">
+{#                            <a href="{{ path('app_asset_show', {'id': asset.id}) }}">show</a>#}
+
+
+                            <a
+                                    href="{{ path('app_asset_show', {'id': asset.id}) }}"
+                                    class="bg-green-500 font-bold py-2 px-4 rounded transition-all hover:bg-green-300">
+                                show
+                            </a>
+                            <a
+                                    href="{{ path('app_asset_edit', {'id': asset.id}) }}"
+                                    class="bg-red-500 font-bold py-2 px-4 rounded transition-all hover:bg-red-300">
+                                edit
+                            </a>
+                        </td>
+{#                        <td class="px-6 py-4">#}
+{#                            <a href="{{ path('app_asset_edit', {'id': asset.id}) }}">edit</a>#}
+{#                        </td>#}
+                    </tr>
+
+                    {% else %}
+                        <tr>
+                            <td colspan="4">no records found</td>
+                        </tr>
+
+
+                    </tbody>
+                {% endfor %}
+            </table>
+
+        </div>
+    </section>
+</main>
+
+{% endblock %}

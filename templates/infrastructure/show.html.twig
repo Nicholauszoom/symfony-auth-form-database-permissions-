@@ -1,0 +1,34 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Infrastructure{% endblock %}
+
+{% block body %}
+    <h1>Infrastructure</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ infrastructure.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ infrastructure.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ infrastructure.description }}</td>
+            </tr>
+            <tr>
+                <th>ImagePath</th>
+                <td>{{ infrastructure.imagePath }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_infrastructure_index') }}">back to list</a>
+
+    <a href="{{ path('app_infrastructure_edit', {'id': infrastructure.id}) }}">edit</a>
+
+    {{ include('infrastructure/_delete_form.html.twig') }}
+{% endblock %}

@@ -48,7 +48,7 @@ class MoviesController extends AbstractController
   }
  
 
-    #[Route(['/movies','/'] , methods:['GET'], name: 'movies')]
+    #[Route('/movies' , methods:['GET'], name: 'movies')]
     public function index(): Response
     {
 

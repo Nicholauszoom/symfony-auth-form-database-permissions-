@@ -1,0 +1,24 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}New Classroom{% endblock %}
+
+{% block body %}
+<div class="w-4/5 m-auto text-center">
+    <div class="py-6 border-b border-gray-200">
+        <h1 class="text-6xl pt-6 pb-5">
+            Create New Class Room
+        </h1>
+        <div class="m-auto w-4/5 my-8">
+            <a
+                    href="{{ path('app_classroom_index') }}"
+                    class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                back to list
+            </a>
+        </div>
+
+    {{ include('classroom/_form.html.twig') }}
+    </div>
+</div>
+
+{#    <a href="{{ path('app_classroom_index') }}">back to list</a>#}
+{% endblock %}

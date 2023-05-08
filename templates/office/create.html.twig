@@ -1,0 +1,80 @@
+
+
+
+{% extends "./base2.html.twig" %}
+
+        {% block body %}
+
+
+
+            <div class="w-4/5 m-auto text-center">
+                <div class="py-6 border-b border-gray-200">
+                    <h1 class="text-6xl pt-6 pb-5">
+                        Create Office Details
+                    </h1>
+                    <div class="m-auto w-4/5 my-8">
+                        <a
+                                href="{{ path('office') }}"
+                                class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
+                            back to list
+                        </a>
+                    </div>
+
+                    {{ form_start(officessForm) }}
+
+                    {{ form_widget(officessForm)}}
+
+                    <button
+                            type="submit"
+                            class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg w-1/5 mt-10 font-extrabold py-4 px-8 rounded-3xl">
+                        create
+                    </button>
+
+
+                    {{ form_start(officessForm) }}
+                </div>
+            </div>
+
+
+{#            <main class="flex-1 flex bg-gray-50">#}
+{#                <section class="bg-gray-50 dark:bg-gray-50  w-full">#}
+{#                    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">#}
+{#                        <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">#}
+{#                            #}{# <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">#}
+{#                            Flowbite     #}
+{#                        </a>#}
+{#                        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">#}
+{#                            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">#}
+{#                                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">#}
+{#                                    Create Office Details#}
+{#                                </h1>#}
+{#                                {{ form_start(officessForm) }}#}
+{#                                <div class="relative z-0 w-full mb-6 group">#}
+{#                                    {{ form_widget(officessForm, {'attr': {'class': 'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer'}}) }}#}
+{#                                </div>#}
+{#                                #}{# <div class="relative z-0 w-full mb-6 group">#}
+{#                                            {{ form_row(detailForm.title) }}#}
+{#                                             {{ form_row(detailForm.decription) }}#}
+{#                                                {{ form_row(detailForm.imagePath) }} #}
+{#                                <button#}
+{#                                        type="submit"#}
+{#                                        class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">#}
+{#                                    Submit Post#}
+{#                                </button>#}
+
+{#                                {{ form_end(officessForm) }}#}
+
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                </section>#}
+{#            </main>#}
+        {% endblock %}
+
+
+
+
+
+
+
